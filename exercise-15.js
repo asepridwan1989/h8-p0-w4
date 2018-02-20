@@ -1,14 +1,14 @@
 function changeVocals (str) {
   //code di sini
-  var vokal = 'aAiIuUeEoO'
-  var konson = 'bBjJvVfFpP'
+  var vokal = 'aAiIuUeEoO';
+  var konson = 'bBjJvVfFpP';
   var tampung ='';
 
   for (var i = 0; i<str.length;i++){
     var status = false;
     for(var j =0; j<vokal.length;j++){
       if(str[i] === vokal[j]){
-        tampung += konson[j]
+        tampung += konson[j];
         status = true;
     }
     }if(status === false){
@@ -65,7 +65,7 @@ function removeSpaces (str) {
 function passwordGenerator (name) {
   //code di sini
   if(name.length <=5){
-    return 'Minimal karakter yang diinputkan adalah 5 karakter'
+    return 'Minimal karakter yang diinputkan adalah 5 karakter';
   }
   var ganti = changeVocals(name);
 //  console.log(ganti);
@@ -75,7 +75,7 @@ function passwordGenerator (name) {
 //  console.log(kapital);
   var remove = removeSpaces(kapital);
 //  console.log(remove);
-  return remove
+  return remove;
 }
 
 console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
